@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,50 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Label" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4U-yB-Pk9">
+                                <rect key="frame" x="140" y="220" width="94" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ua-xT-RWa">
+                                <rect key="frame" x="171" y="260.5" width="33" height="30"/>
+                                <state key="normal" title="hello"/>
+                                <connections>
+                                    <action selector="buttonconnected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eA3-wM-zyw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-iO-QWM">
+                                <rect key="frame" x="156" y="310.5" width="62" height="30"/>
+                                <state key="normal" title="Goodbye"/>
+                                <connections>
+                                    <action selector="buttonLeave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nq-ie-Xbd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9bY-iO-QWM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NyS-1u-spn"/>
+                            <constraint firstItem="9bY-iO-QWM" firstAttribute="top" secondItem="3ua-xT-RWa" secondAttribute="bottom" constant="20" id="aPG-Cb-Eei"/>
+                            <constraint firstItem="k4U-yB-Pk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vXj-tC-8LT"/>
+                            <constraint firstItem="k4U-yB-Pk9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="weP-9V-Ine"/>
+                            <constraint firstItem="3ua-xT-RWa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zbE-Vy-EZv"/>
+                            <constraint firstItem="3ua-xT-RWa" firstAttribute="top" secondItem="k4U-yB-Pk9" secondAttribute="bottom" constant="20" id="zyC-wE-vy2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="TheLabel" destination="k4U-yB-Pk9" id="Wr7-IK-dbl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
